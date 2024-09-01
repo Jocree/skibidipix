@@ -1,7 +1,8 @@
 body{
     font-family: sans-serif;
     background-image: url(../src/img/skibidibackground.png);
-    background-position: center;
-    background-size: 50%;
+    background-position-x: center;
+    background-position-y: 0;
+    background-size: 75%;
     background-repeat: no-repeat;
 }
