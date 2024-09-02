@@ -20,12 +20,22 @@ document.addEventListener('DOMContentLoaded', () => {
         icon.classList.add('bi-moon');
 
         storage.setItem("dark", true);
+
+        for(i=0; i<document.getElementsByClassName('pix').length; i++){
+          document.getElementsByClassName('pix')[i].style.borderColor = 'white'
+        }
+
       } else {
         body.classList.remove('dark-mode');
         icon.classList.remove('bi-moon');
         icon.classList.add('bi-brightness-high');
 
         storage.setItem("dark", false);
+
+        for(i=0; i<document.getElementsByClassName('pix').length; i++){
+          document.getElementsByClassName('pix')[i].style.borderColor = 'black'
+        }
+        
       }
     });
 });
@@ -38,6 +48,10 @@ function init(){
         icon.classList.remove('bi-brightness-high');
         icon.classList.add('bi-moon');
         switchInput.checked = true;
+
+        for(i=0; i<document.getElementsByClassName('pix').length; i++){
+          document.getElementsByClassName('pix')[i].style.borderColor = 'white'
+        }
     }
 }
 
