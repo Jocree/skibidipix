@@ -86,6 +86,10 @@ input:checked + .slider:before {
   background-color: var(--dark-bgcolor);
 }
 
+.dark-mode h1,h2,h3,h4,h5,h6{
+  color: white;
+}
+
 .switch .slider.round i {
   position: absolute;
   top: 52%;
@@ -162,7 +166,15 @@ button{
   transition: all .3s;
 }
 
+.t{
+  margin-left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
 
+
+
+/* celulosta */
 @media screen and (max-width: 768px) {
   .content {
     margin-left: 45%;

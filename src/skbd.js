@@ -12,5 +12,6 @@ function pixredirect(n) {
 
 function updateTitle() {
     const title = "R$" + currentv;
-    window.location.href = `pix.html?title=${title}`;
-  }
+    let val = currentv
+    window.location.href = `pix.html?title=${title}&val=${val}`;
+}

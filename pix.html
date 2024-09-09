@@ -6,14 +6,22 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="src/skbd.js"></script>
     <script src="src/darkmd.js"></script>
-    <script>
-        const urlParams = new URLSearchParams(window.location.search);
-        const title = urlParams.get('title');
-        document.title = title;
-    </script>
-    <title id="tit"></title>
+    <script src="src/pix.js"></script>
 </head>
 <body>
-    
+    <h1 class="t" id="t">Pix no valor de </h1>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            let title = urlParams.get('title');
+            let val = urlParams.get('val');
+            document.title = title;
+            if (val !== null && val !== '') {
+                document.getElementById('t').innerHTML += title;
+            } else {
+                document.getElementById('t').innerHTML = 'Valor não fornecido';
+            }
+        });
+    </script>
 </body>
 </html>
