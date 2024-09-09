@@ -1,15 +1,16 @@
-const values = [1,2,5,10,20,50,100,200];
-var currentv;
+const values = [1, 2, 5, 10, 20, 50, 100, 200];
+var currentv = 0;
 
-function pixredirect(n){
-    if(n == 0){
-        alert("como?")
-    }
-
-    for (let i = 0; i < values.length; i++) {
-        if (n == values[i]) {
-            currentv = n;
-        }
-        
-    }
+function pixredirect(n) {
+  if (n == 0) {
+    alert("como?");
+  } else if (values.includes(n)) {
+    currentv = n;
+    updateTitle();
+  }
 }
+
+function updateTitle() {
+    const title = "R$" + currentv;
+    window.location.href = `pix.html?title=${title}`;
+  }
